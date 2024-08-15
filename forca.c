@@ -4,7 +4,7 @@
 #include<time.h>
 #include <stdlib.h>
 char palavrasecreta[20];
-char chutes[26];
+char chutes[30];
 int chutesdados = 0;
 void abertura() {
     printf("/****************/\n");
@@ -35,7 +35,7 @@ int jachutou(char letra) {
 
 void desenhaforca() {
 
-    printf("Vocé já deu %d chutes\n", chutesdados);
+    printf("VocÃ© jÃ¡ deu %d chutes\n", chutesdados);
 
     for(int i = 0; i < strlen(palavrasecreta); i++) {
 
@@ -57,7 +57,7 @@ char *tema []= {"personagemAnime.txt", "palavras.txt", "filmes.txt","paises.txt"
 char seleciona [100];
 int temaAchado =0;
 while(!temaAchado){
-  printf("Temas disponíveis:\n personagemAnime.txt, palavras.txt, filmes.txt, paises.txt, jogos.txt, animes.txt \n ");
+  printf("Temas disponÃ­veis:\n personagemAnime.txt, palavras.txt, filmes.txt, paises.txt, jogos.txt, animes.txt \n ");
 printf("Digite o tema: ");
 scanf("%s", seleciona);
 printf(" O tema selecionado foi: %s\n", seleciona);
@@ -69,7 +69,7 @@ for (int i = 0; i < 6; i++)
    }
 }
  if(!temaAchado){
-    printf("Tema '%s' não encontrado. Por favor, introduza novamente um tema válido.\n", seleciona);
+    printf("Tema '%s' nÃ£o encontrado. Por favor, introduza novamente um tema vÃ¡lido.\n", seleciona);
  }
 }
 
@@ -79,7 +79,7 @@ for (int i = 0; i < 6; i++)
 if(strcmp(seleciona, tema[i]) == 0){
 f = fopen(tema[i], "r");
 if(f == 0){
-    printf("Banco de dados de palavras não disponível\n\n");
+    printf("Banco de dados de palavras nÃ£o disponÃ­vel\n\n");
  fclose(f);
 }
 int qtddepalavras;
@@ -138,7 +138,7 @@ void desenharvitoria() {
     printf("       \\O/    \n");
     printf("        |     \n");
     printf("       / \\    \n");
-    printf("    Parabéns! Você ganhou!\n");
+    printf("    ParabÃ©ns! VocÃª ganhou!\n");
     printf("\n");
 }
 
